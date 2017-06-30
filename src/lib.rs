@@ -31,6 +31,17 @@ pub mod my_std {
         pub use std::iter::Iterator as MyIterator;
     }
 
+    /// Re-export ops
+    pub mod my_ops {
+        pub use std::ops;
+        pub use std::ops::*;
+
+        pub use std::ops::{
+            Add as MyAdd,
+            Mul as MyMul
+        };
+    }
+
     /// Re-export ffi
     pub mod my_ffi {
         pub use std::ffi;
