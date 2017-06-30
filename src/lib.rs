@@ -3,52 +3,36 @@ pub use std::*;
 
 /// Re-export everything from std
 pub mod my_std {
-    /// Re-export everything from std
     pub use std::*;
 
-    /// Re-export fmt
-    pub mod my_fmt {
-        pub use std::fmt;
-        pub use std::fmt::*;
+    pub use std::{
+        fmt,
+        string,
+        iter,
+        ops,
+        ffi,
+    };
 
-        pub use std::fmt::Display as MyDisplay;
-        pub use std::fmt::Debug as MyDebug;
-    }
+    pub use fmt::{
+        Display,
+        Debug,
+    };
 
-    /// Re-export string
-    pub mod my_string {
-        pub use std::string;
-        pub use std::string::*;
+    pub use string::{
+        String,
+    };
 
-        pub use string::String as MyString;
-    }
+    pub use iter::{
+        Iterator,
+        IntoIterator,
+    };
 
-    /// Re-export iter
-    pub mod my_iter {
-        pub use std::iter;
-        pub use std::iter::*;
-
-        pub use std::iter::Iterator as MyIterator;
-    }
-
-    /// Re-export ops
-    pub mod my_ops {
-        pub use std::ops;
-        pub use std::ops::*;
-
-        pub use std::ops::{
-            Add as MyAdd,
-            Mul as MyMul
-        };
-    }
-
-    /// Re-export ffi
-    pub mod my_ffi {
-        pub use std::ffi;
-        pub use std::ffi::*;
-
-        pub use std::ffi::OsString as MyOsString;
-    }
+    pub use ops::{
+        Add as OperatorAdd,
+        Sub as OperatorSubtract,
+        Mul as OperatorMultiply,
+        Div as OperatorDivide,
+    };
 }
 
 /// Re-export built-in
