@@ -2,7 +2,7 @@
 pub use std::*;
 
 /// Re-export everything from std
-pub mod my_std {
+pub mod libraries {
     pub use std::*;
 
     pub use std::{
@@ -36,13 +36,13 @@ pub mod my_std {
 }
 
 /// Re-export built-in
-pub mod my_built_in {
+pub mod built_in {
     /// Re-export types
-    pub mod my_types {
+    pub mod types {
         /// Re-export numbers
-        pub mod my_numbers {
+        pub mod numbers {
             /// Re-export signed integers
-            pub mod my_signed_intergers {
+            pub mod signed_intergers {
                 pub use i8 as int8;
                 pub use i16 as int16;
                 pub use i32 as int32;
@@ -50,7 +50,7 @@ pub mod my_built_in {
             }
 
             /// Re-export unsigned integers
-            pub mod my_unsigned_integers {
+            pub mod unsigned_integers {
                 pub use u8 as uint8;
                 pub use u16 as uint16;
                 pub use u32 as uint32;
@@ -58,18 +58,18 @@ pub mod my_built_in {
             }
 
             /// Re-export floating-point types
-            pub mod my_floating_points {
+            pub mod floating_points {
                 pub use f32 as float32;
                 pub use f64 as float64;
             }
         }
 
         /// Re-export strings
-        pub mod my_strings {
+        pub mod strings {
             pub use std::string;
             pub use std::string::*;
-            pub use str as my_str;
-            pub use string::String as MyString;
+            pub use str;
+            pub use string::String;
         }
     }
 }
