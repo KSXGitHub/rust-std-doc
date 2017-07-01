@@ -41,6 +41,16 @@ pub mod libraries {
         Ord,
         PartialOrd
     };
+
+    pub use ffi::{
+        CStr,
+        CString,
+        OsStr,
+        OsString,
+        FromBytesWithNulError,
+        IntoStringError,
+        NulError,
+    };
 }
 
 /// Re-export built-in
