@@ -92,6 +92,7 @@ pub mod built_in {
     }
 }
 
+/// Define operators via traits
 pub mod operator_overloading {
     pub use super::libraries::{ops, cmp};
     pub use self::ops::*;
