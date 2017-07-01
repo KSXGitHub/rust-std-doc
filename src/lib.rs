@@ -37,7 +37,9 @@ pub mod libraries {
 
     pub use cmp::{
         Eq,
-        PartialEq
+        PartialEq,
+        Ord,
+        PartialOrd
     };
 }
 
