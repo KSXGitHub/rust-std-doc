@@ -10,6 +10,7 @@ pub mod libraries {
         string,
         iter,
         ops,
+        cmp,
         ffi,
     };
 
@@ -32,6 +33,11 @@ pub mod libraries {
         Sub as OperatorSubtract,
         Mul as OperatorMultiply,
         Div as OperatorDivide,
+    };
+
+    pub use cmp::{
+        Eq,
+        PartialEq
     };
 }
 
