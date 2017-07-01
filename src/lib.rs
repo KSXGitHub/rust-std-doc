@@ -39,7 +39,7 @@ pub mod libraries {
         Eq,
         PartialEq,
         Ord,
-        PartialOrd
+        PartialOrd,
     };
 
     pub use ffi::{
