@@ -92,6 +92,8 @@ pub mod built_in {
     }
 }
 
-pub use libraries::{
-    ops as operator_overloading,
-};
+mod operator_overloading {
+    pub use super::libraries::{ops, cmp};
+    pub use self::ops::*;
+    pub use self::cmp::*;
+}
